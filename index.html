@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="keywords" content="Mansi Priya, Portfolio, Web Developer, React, Node.js, JavaScript, HTML, CSS, Freelance Developer">
+    <meta name="author" content="Mansi Priya">
     <title>My Portfolio | Mansi Priya</title>
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="My Portfolio | Mansi Priya">
+    <meta property="og:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://www.mansipriya.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Portfolio | Mansi Priya">
+    <meta name="twitter:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="twitter:image" content="images/profile.jpg">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png" alt="Favicon">
 </head>
 <body>
- 
+    
     <!-- NAVIGATION -->
     <nav>
         <a href="#about">About</a>
@@ -25,7 +42,10 @@
     <!-- ABOUT SECTION -->
     <section id="about">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="Profile photo of Mansi" width="200">
+        <figure class="profile-figure">
+                    <img src="images/profile.jpg" alt="Mansi Priya profile photo" width="300">
+                    <figcaption>Mansi Priya — Web Developer</figcaption>
+                </figure>
         <p>I am a Computer Science student. I have recently started learning web development and enjoy creating simple web pages using HTML.</p>
     </section>
  
@@ -68,6 +88,8 @@
             <p>Description of project 1</p>
             <a href="#">View Project</a>
         </div>
+        <!--Embed YouTube Video (iframe)-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=oosVkAEGRk6cHw2C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
  
     <!-- CONTACT SECTION -->
@@ -128,9 +150,7 @@
         placeholder="Tell me about your project..."
         required></textarea>
         <br><br>
-        <button type="submit">
-        Send Message 🚀
-        </button>
+        <button type="submit" aria-label="Submit button">Send Message 🚀</button>
         </form>
     </section>
  
