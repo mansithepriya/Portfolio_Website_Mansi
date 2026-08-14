@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Activity</title>
+</head>
+
+<body>
+
+    <h1>Practice Activity</h1>
+
+    <form id="myForm">
+
+        <input type="text" id="nameInput" placeholder="Enter something">
+
+        <button type="submit" id="myButton">
+            Click Me
+        </button>
+
+    </form>
+
+    <script>
+
+        // Get the input box and button
+        let input = document.getElementById("nameInput");
+        let form = document.getElementById("myForm");
+
+        // When the form is submitted
+        form.addEventListener("submit", function(event) {
+
+            // Prevent form submission
+            event.preventDefault();
+
+            // Show alert
+            alert("Button clicked!");
+
+            // Print input value in console
+            console.log(input.value);
+
+        });
+
+    </script>
+
+</body>
+</html>

@@ -145,6 +145,10 @@ section h2::after{
     color: var(--white);
     padding: 70px 5%;
 }
+.hero-section h2 {
+    color: #c7b372;
+    font-style: italic;
+}
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
