@@ -361,188 +361,655 @@ figcaption{
 }
 
 
-/* FOR DARK MODE CSS CODE */
 /* ========================================
    DARK MODE
+   WINE • BURGUNDY • CHAMPAGNE GOLD
 ======================================== */
- 
- 
-/* Smooth Transition */
+
+
+/* ========================================
+   THEME TRANSITIONS
+======================================== */
+
 body,
 .site-header,
+.navbar,
 .hero-section,
-.skill-item,
-.project-card,
+.about-section,
+.skills-section,
+.projects-section,
 .contact-section,
 .site-footer,
+.skill-item,
+.project-card,
 input,
 textarea,
+button,
 .btn,
 a {
-    transition: all 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
- 
- 
-/* Body */
+
+
+/* ========================================
+   DARK MODE COLOR SYSTEM
+======================================== */
+
 body[data-theme="dark"] {
-    background: #121212;
-    color: #f5f5f5;
+    --dark-bg: #0F0505;
+    --dark-section: #180909;
+    --dark-section-alt: #100606;
+
+    --dark-card: #210C0C;
+    --dark-card-hover: #281010;
+
+    --wine: #6E1111;
+    --wine-light: #8F1D1D;
+    --wine-border: #4A2525;
+
+    --gold: #D4AF37;
+    --gold-light: #E5C866;
+
+    --text-primary: #F5EEEE;
+    --text-secondary: #D6C6C6;
+    --text-muted: #A89090;
+
+    --border: #432020;
 }
- 
- 
-/* Header */
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body[data-theme="dark"] {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+}
+
+
+/* ========================================
+   HEADER / NAVBAR
+======================================== */
+
 body[data-theme="dark"] .site-header,
 body[data-theme="dark"] .navbar {
-    background: #1a1a1a;
+    background: #120606;
+    color: var(--text-primary);
+    border-bottom: 1px solid #321515;
 }
- 
- 
-/* Navigation Links */
+
+
+/* Navigation links */
+
 body[data-theme="dark"] .nav-links a {
-    color: #ffffff;
+    color: #DCCCCC;
 }
- 
- 
+
 body[data-theme="dark"] .nav-links a:hover,
 body[data-theme="dark"] .nav-links a.active {
-    color: #F18F01;
+    color: var(--gold);
 }
- 
- 
+
+
 /* Logo */
+
 body[data-theme="dark"] .logo {
-    color: #ffffff;
+    color: var(--text-primary);
 }
- 
- 
-/* Hero */
+
+body[data-theme="dark"] .logo span {
+    color: var(--gold);
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
 body[data-theme="dark"] .hero-section {
-    background: linear-gradient(135deg, #111827, #1f2937);
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(110, 17, 17, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0F0505 0%,
+            #200909 55%,
+            #3B0B0B 100%
+        );
+
+    color: var(--text-primary);
 }
- 
- 
-/* Highlight */
+
+
+/* Hero heading */
+
+body[data-theme="dark"] .hero-section h1,
+body[data-theme="dark"] .hero-section h2,
+body[data-theme="dark"] .hero-section h3 {
+    color: var(--text-primary);
+}
+
+
+/* Hero paragraph */
+
+body[data-theme="dark"] .hero-section p {
+    color: var(--text-secondary);
+}
+
+
+/* Highlighted text */
+
 body[data-theme="dark"] .highlight {
-    color: #F18F01;
+    color: var(--gold);
 }
- 
- 
-/* About */
+
+
+/* ========================================
+   ALL SECTION HEADINGS
+======================================== */
+
+body[data-theme="dark"] section h1,
+body[data-theme="dark"] section h2,
+body[data-theme="dark"] section h3 {
+    color: var(--text-primary);
+}
+
+
+/*
+   If your website uses .section-title,
+   this guarantees the heading stays visible.
+*/
+
+body[data-theme="dark"] .section-title {
+    color: var(--text-primary);
+}
+
+
+/* Gold underline */
+
+body[data-theme="dark"] .section-title::after,
+body[data-theme="dark"] section h2::after {
+    background: var(--gold);
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
 body[data-theme="dark"] .about-section {
-    background: #121212;
-    color: #f5f5f5;
+    background: var(--dark-section);
+    color: var(--text-primary);
 }
- 
- 
-/* Skills */
+
+
+/* About headings */
+
+body[data-theme="dark"] .about-section h1,
+body[data-theme="dark"] .about-section h2,
+body[data-theme="dark"] .about-section h3 {
+    color: var(--text-primary);
+}
+
+
+/* About paragraph */
+
+body[data-theme="dark"] .about-section p {
+    color: var(--text-secondary);
+}
+
+
+/* About list */
+
+body[data-theme="dark"] .about-section ul {
+    color: var(--text-secondary);
+}
+
+body[data-theme="dark"] .about-section li {
+    color: var(--text-secondary);
+}
+
+
+/* Gold bullet points */
+
+body[data-theme="dark"] .about-section li::marker {
+    color: var(--gold);
+}
+
+
+/* ========================================
+   SKILLS SECTION
+======================================== */
+
 body[data-theme="dark"] .skills-section {
-    background: #181818;
+    background: var(--dark-section-alt);
+    color: var(--text-primary);
 }
- 
- 
+
+
+/* Skills heading */
+
+body[data-theme="dark"] .skills-section h1,
+body[data-theme="dark"] .skills-section h2,
+body[data-theme="dark"] .skills-section h3 {
+    color: var(--text-primary);
+}
+
+
+/* Skill cards */
+
 body[data-theme="dark"] .skill-item {
-    background: #242424;
-    color: #ffffff;
-    border-color: #F18F01;
+    background: var(--dark-card);
+    color: var(--text-primary);
+
+    border: 1px solid var(--wine-border);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
 }
- 
- 
-/* Projects */
+
+
+/* Skill card text */
+
+body[data-theme="dark"] .skill-item h3,
+body[data-theme="dark"] .skill-item h4,
+body[data-theme="dark"] .skill-item p,
+body[data-theme="dark"] .skill-item span {
+    color: var(--text-primary);
+}
+
+
+/* Skill card hover */
+
+body[data-theme="dark"] .skill-item:hover {
+    background: var(--dark-card-hover);
+
+    border-color: var(--gold);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(212, 175, 55, 0.12);
+}
+
+
+/* ========================================
+   PROJECTS SECTION
+======================================== */
+
 body[data-theme="dark"] .projects-section {
-    background: #121212;
+    background: var(--dark-section);
+    color: var(--text-primary);
 }
- 
- 
+
+
+/* Projects heading */
+
+body[data-theme="dark"] .projects-section h1,
+body[data-theme="dark"] .projects-section h2,
+body[data-theme="dark"] .projects-section h3 {
+    color: var(--text-primary);
+}
+
+
+/* ========================================
+   PROJECT FILTER BUTTONS
+======================================== */
+
+body[data-theme="dark"] .filter-btn {
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    border: 1px solid var(--wine);
+
+    border-radius: 30px;
+}
+
+
+/* Filter hover */
+
+body[data-theme="dark"] .filter-btn:hover {
+    background: #351010;
+
+    color: var(--gold);
+
+    border-color: var(--gold);
+}
+
+
+/* Active filter */
+
+body[data-theme="dark"] .filter-btn.active {
+    background: var(--wine);
+
+    color: #FFFFFF;
+
+    border-color: var(--wine);
+
+    box-shadow:
+        0 5px 15px rgba(110, 17, 17, 0.30);
+}
+
+
+/* ========================================
+   PROJECT CARDS
+======================================== */
+
 body[data-theme="dark"] .project-card {
-    background: #242424;
-    color: #ffffff;
-    box-shadow: 0 5px 20px rgba(255,255,255,0.08);
+    background: var(--dark-card);
+
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
 }
- 
- 
+
+
+/* Project card hover */
+
+body[data-theme="dark"] .project-card:hover {
+    background: var(--dark-card-hover);
+
+    border-color: var(--gold);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(212, 175, 55, 0.12);
+}
+
+
+/* Project card headings */
+
+body[data-theme="dark"] .project-card h1,
+body[data-theme="dark"] .project-card h2,
 body[data-theme="dark"] .project-card h3,
+body[data-theme="dark"] .project-card h4 {
+    color: var(--text-primary);
+}
+
+
+/* Project card paragraph */
+
 body[data-theme="dark"] .project-card p {
-    color: #ffffff;
+    color: var(--text-secondary);
 }
- 
- 
-/* Tags */
+
+
+/* ========================================
+   PROJECT TAGS
+======================================== */
+
 body[data-theme="dark"] .tag {
-    background: #F18F01;
-    color: #ffffff;
+    background: #351313;
+
+    color: var(--gold-light);
+
+    border: 1px solid #542525;
 }
- 
- 
-/* Contact */
+
+
+/* Tag hover */
+
+body[data-theme="dark"] .tag:hover {
+    background: var(--wine);
+
+    color: #FFFFFF;
+
+    border-color: var(--gold);
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
 body[data-theme="dark"] .contact-section {
-    background: #181818;
+    background: var(--dark-section-alt);
+
+    color: var(--text-primary);
 }
- 
- 
-/* Form */
+
+
+/* Contact headings */
+
+body[data-theme="dark"] .contact-section h1,
+body[data-theme="dark"] .contact-section h2,
+body[data-theme="dark"] .contact-section h3 {
+    color: var(--text-primary);
+}
+
+
+/* Contact paragraph */
+
+body[data-theme="dark"] .contact-section p {
+    color: var(--text-secondary);
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
 body[data-theme="dark"] input,
-body[data-theme="dark"] textarea {
-    background: #2b2b2b;
-    color: #ffffff;
-    border: 1px solid #555;
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select {
+    background: var(--dark-card);
+
+    color: var(--text-primary);
+
+    border: 1px solid var(--wine-border);
+
+    outline: none;
 }
- 
- 
+
+
+/* Form focus */
+
+body[data-theme="dark"] input:focus,
+body[data-theme="dark"] textarea:focus,
+body[data-theme="dark"] select:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.10);
+}
+
+
+/* Placeholder */
+
 body[data-theme="dark"] input::placeholder,
 body[data-theme="dark"] textarea::placeholder {
-    color: #bdbdbd;
+    color: #8F7A7A;
 }
- 
- 
+
+
+/* Labels */
+
 body[data-theme="dark"] label {
-    color: #ffffff;
+    color: var(--text-secondary);
 }
- 
- 
-/* Buttons */
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
 body[data-theme="dark"] .btn-primary {
-    background: #F18F01;
-    color: #ffffff;
+    background: var(--gold);
+
+    color: #180909;
+
+    border: 1px solid var(--gold);
+
+    font-weight: 600;
 }
- 
- 
+
+
+/* Primary button hover */
+
+body[data-theme="dark"] .btn-primary:hover {
+    background: var(--gold-light);
+
+    border-color: var(--gold-light);
+
+    color: #120606;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(212, 175, 55, 0.20);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
 body[data-theme="dark"] .btn-secondary {
-    border-color: #ffffff;
-    color: #ffffff;
+    background: transparent;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--gold);
 }
- 
- 
+
+
+/* Secondary button hover */
+
 body[data-theme="dark"] .btn-secondary:hover {
-    background: #ffffff;
-    color: #121212;
+    background: var(--gold);
+
+    color: #180909;
+
+    border-color: var(--gold);
+
+    transform: translateY(-2px);
 }
- 
- 
-/* Footer */
+
+
+/* ========================================
+   SOCIAL LINKS / ICONS
+======================================== */
+
+body[data-theme="dark"] .social-links a,
+body[data-theme="dark"] .social-icons a {
+    color: var(--text-secondary);
+}
+
+
+body[data-theme="dark"] .social-links a:hover,
+body[data-theme="dark"] .social-icons a:hover {
+    color: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
 body[data-theme="dark"] .site-footer {
-    background: #1a1a1a;
-    color: #cccccc;
+    background: #0B0303;
+
+    color: var(--text-muted);
+
+    border-top: 1px solid #321515;
 }
- 
- 
+
+
+/* Footer links */
+
 body[data-theme="dark"] .site-footer a {
-    color: #ffffff;
+    color: var(--text-secondary);
 }
- 
- 
+
+
 body[data-theme="dark"] .site-footer a:hover {
-    color: #F18F01;
+    color: var(--gold);
 }
- 
- 
-/* Theme Button */
+
+
+/* ========================================
+   THEME TOGGLE
+======================================== */
+
 body[data-theme="dark"] .theme-toggle {
-    background: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
+    background: #281010;
+
+    color: var(--gold-light);
+
+    border: 1px solid #5A2929;
 }
+
+
+/* Theme toggle hover */
+
+body[data-theme="dark"] .theme-toggle:hover {
+    background: #3A1515;
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+body[data-theme="dark"] a {
+    color: var(--gold-light);
+}
+
+
+body[data-theme="dark"] a:hover {
+    color: var(--gold);
+}
+
+
+/* ========================================
+   FORM VALIDATION
+======================================== */
 
 .form-group input.error,
 .form-group textarea.error {
-    border: 2px solid red;
+    border: 2px solid #E05252;
+}
+
+
+/* ========================================
+   OPTIONAL SCROLLBAR
+======================================== */
+
+body[data-theme="dark"]::-webkit-scrollbar {
+    width: 10px;
+}
+
+body[data-theme="dark"]::-webkit-scrollbar-track {
+    background: #0F0505;
+}
+
+body[data-theme="dark"]::-webkit-scrollbar-thumb {
+    background: #4A1717;
+    border-radius: 10px;
+}
+
+body[data-theme="dark"]::-webkit-scrollbar-thumb:hover {
+    background: #6E1111;
 }
